@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	Name :
+	<input onmouseover="showHint()" onclick="removeHint()" type="text"
+		id="num">
+	<br>
+	<a id="hint"></a>
+</body>
+<script>
+function showHint() {
+   
+    document.getElementById("hint").innerHTML = "<br>Enter name in format FirstName LastName";
+}
+function removeHint() {
+	   
+    document.getElementById("hint").innerHTML = "";
+}
+</script>
+</html>
+

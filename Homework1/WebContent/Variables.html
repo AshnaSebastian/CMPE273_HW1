@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<br> Rate:
+	<input type="text" id="rate">
+	<br> Amount:
+	<input type="text" id="amt">
+	<br> Time:
+	<input type="text" id="time">
+	<br>
+	<p>Calculate Interest</p>
+	<button onclick="simpleInterest()">Calculate</button>
+	<br>
+	<a id="interest"></a>
+
+	<script>
+function simpleInterest() {
+    
+    var rate =  document.getElementById("rate").value;
+    var Amount =  document.getElementById("amt").value;
+    var time =  document.getElementById("time").value;
+    var interest = rate * Amount * time;
+    document.getElementById("interest").innerHTML = "The simple Interest is " + interest;
+}
+</script>
+
+</body>
+</html>

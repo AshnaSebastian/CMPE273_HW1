@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<br>
+	<p>Calculate Factorial</p>
+	Rate:
+	<input type="text" id="num">
+	<br>
+
+	<button onclick="simpleInterest()">Calculate</button>
+	<br>
+	<a id="interest"></a>
+
+	<script>
+function simpleInterest() {
+    
+    var no =  document.getElementById("num").value;
+
+    var interest = 1 ;
+    for(i=1;i<=no;i++){
+    	interest = interest * i;
+    }
+    document.getElementById("interest").innerHTML = "Factorial : " + interest;
+}
+</script>
+
+</body>
+</html>

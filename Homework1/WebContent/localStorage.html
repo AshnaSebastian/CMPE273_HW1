@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<br> Data to be stored in localStorage:
+	<input type="text" id="loc">
+	<br>
+	<button onclick="save()">Save</button>
+	<br><br><br>
+	<button onclick="view()">view data in local storage and session storage</button>
+	<br><a id="local"></a>
+	<br><a id="message"></a>
+	<script>
+		function save(){
+			if(typeof(Storage) !== "undefined") {
+				 localStorage.enteredData =  document.getElementById("loc").value;
+				 
+			}
+			else{
+				document.getElementById("message").innerHTML =   "Local storage not supported";
+			}
+		}
+		function view(){
+			
+			if(typeof(Storage) !== "undefined") {
+				document.getElementById("local").innerHTML =   localStorage.enteredData ;
+				
+			}
+			else{
+				document.getElementById("message").innerHTML =   "Local storage not supported";
+			}	
+						
+		}
+		
+	</script>
+</body>
+</html>

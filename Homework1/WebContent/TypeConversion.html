@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<br> Number1:
+	<input type="text" id="num1">
+	<br> Number2:
+	<input type="text" id="num2">	
+	<br>
+	<p>Calculate Quotient</p>
+	<button onclick="sum()">Calculate</button>
+	<br>
+	<a id="res1"></a>
+	<a id="res2"></a>
+	<script>
+		function sum() {
+		   
+		     var number1 =  document.getElementById("num1").value;
+		     var number2 =  document.getElementById("num2").value;
+		     var res1 = number1 + number2;
+		     var res2 = Number(number1) + Number(number2);
+		     document.getElementById("res1").innerHTML = "Without type conversion " + res1;
+		     document.getElementById("res2").innerHTML = "<br>With type conversion " + res2;
+		}
+	</script>
+
+</body>
+</html>

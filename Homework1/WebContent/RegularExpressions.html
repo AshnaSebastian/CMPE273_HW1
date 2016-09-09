@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>Enter a string numbers</p>
+	<input type="text" id="str"><br>
+	<p>Enter a regular expression</p>
+	<input type="text" id="exp"><br><br>
+	<button onclick="check()">Check if pattern exists</button><br>
+	<a id="result1"></a><br>
+	<p>Enter a new string</p>
+	<input type="text" id="rep"><br>
+	<button onclick="replace()">Replace pattern</button><br>
+	<a id="result2"></a><br>
+	<script>
+	function check() {		
+		 var str = (document.getElementById("str").value);
+		 var patt = (document.getElementById("exp").value);
+		 var exp = new RegExp(patt, 'i');
+		 var result = str.search(exp);
+		 if(result == -1){
+			 result = false;
+		 }
+		 else{
+			 result = true;
+		 }
+	    document.getElementById("result1").innerHTML = "<br>Result : " + result;
+	}
+	function replace() {		
+		 var str = (document.getElementById("str").value);
+		 var patt = (document.getElementById("exp").value);
+		 var exp = new RegExp(patt, 'i');
+		 var rep = (document.getElementById("rep").value);
+		 var result = str.replace(exp,rep);
+		
+	    document.getElementById("result2").innerHTML = "<br>Result : " + result;
+	}
+	
+	</script>
+</body>
+</html>

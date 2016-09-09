@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<br>
+	<p></p>
+	<button onclick="display()">Display</button>
+	<br>
+	<a id="res"></a>
+	<script>
+		function display() {
+			try{
+		    var studentDetailJSON ='{'+
+		    		'"students":['+
+		    		            ' {"firstName":"Ashna", "lastName":"Sebastian"}, '+
+		    		            ' {"firstName":"Merin",	"lastName":"Sebastian"},'+
+		    		            ' {"firstName":"Mary", "lastName":"Abraham"}' +
+		    		        ' ]}';
+		    		         
+		    var obj = JSON.parse(studentDetailJSON);
+		    document.getElementById("res").innerHTML = obj.students[1].firstName + " " + obj.students[1].lastName;
+			}
+			catch(err){
+				 document.getElementById("res").innerHTML = err;
+			}
+		    
+		}
+		
+	</script>
+
+</body>
+</html>

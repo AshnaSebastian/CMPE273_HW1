@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLoc()">Find Location</button>
+
+<p id="demo"></p>
+<div id="googMap"></div>
+
+<script>
+var x = document.getElementById("demo");
+function initMap() {
+	var map;
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 8
+    });
+}
+function getLoc() {
+   
+        navigator.geolocation.getCurrentPosition(showPos);
+    
+}
+
+function showPos(position) {
+	var mapImageUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude +","+position.coords.longitude +"&zoom=14&size=400x300&sensor=false";
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude  ;
+    document.getElementById("googMap").innerHTML = "<img src='"+mapImageUrl+"'>";
+}
+</script>
+
+</body>
+</html>
+

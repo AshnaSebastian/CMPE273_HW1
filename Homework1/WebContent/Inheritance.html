@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+Click to view student detail.
+	<button onclick="studentDetail()">View Student Detail</button>
+	<br>
+	<a id="student"></a>
+<script>
+	function studentDetail(){
+		
+				var Individual = 
+				{
+						firstName : "Ashna",
+						lastName :"Sebastian",
+						age: "27"
+				}
+			var Student = Object.create(Individual);
+			Student.College = "SJSU";
+			Student.Id = "010726482";
+				
+					document.getElementById("student").innerHTML = "Detail are shown below: <br> First name: " 
+					+ Student.firstName + "<br> Last name: " 
+					+ Student.lastName + "<br> Age: "
+					+ Student.age + "<br> College: "
+					+ Student.College + "<br> Id: "
+					+ Student.Id;
+	}
+</script>
+</body>
+</html>

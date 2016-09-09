@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	Click to view student detail.
+	<button onclick="studentDetail()">View Student Detail</button>
+	<br>
+	<a id="student"></a>
+
+	<script>
+function studentDetail() {
+    var student = {
+    		fname : "Ashna",
+    		lname : "Sebastian",
+    		Id 	  : "010726482",
+    		Dept  : "CMPE"
+    } ;
+   
+    document.getElementById("student").innerHTML = "Detail are shown below: <br> First name: " 
+    												+ student.fname + "<br> Last name: " 
+    												+ student.lname + "<br> Id: "
+    												+ student.Id + "<br> Department: "
+    												+ student.Dept;
+}
+</script>
+
+</body>
+</html>

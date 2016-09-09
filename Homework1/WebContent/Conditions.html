@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>Enter 2 numbers</p>
+	<input type="text" id="num1"><br>
+	<input type="text" id="num2"><br>
+	<br>
+	Enter 1 to find sum.<br>
+	Enter 2 to find average.<br>
+	Enter 3 to find difference.<br>
+	Enter 4 to find product.<br>
+	Enter 5 to find quotient.<br>
+	<br>
+	<input type="text" id="choice"><br>
+	<button onclick="choice()">Calculate</button>
+	<br>
+	<a id="result"></a>
+	<script>
+	function choice() {
+		
+		 var num1 = (document.getElementById("num1").value);
+		 var num2 = (document.getElementById("num2").value);
+		 var choice = (document.getElementById("choice").value);
+		 switch (choice){
+		 case "1":
+			 var result = (num1-0) + (num2-0);
+			 break;
+		 case "2":
+			 var result = ((num1-0) + (num2-0))/2;
+			 break;
+		 case "3":
+			 var result = (num1-0) - (num2-0);
+			 break;
+		 case "4":
+			 var result = (num1-0) * (num2-0);
+			 break;
+		 case "5":
+			 var result = (num1-0) / (num2-0);
+			 break;
+		 }
+		 
+	    document.getElementById("result").innerHTML = "<br>Result : " + result;
+	}
+	
+	</script>
+</body>
+</html>
