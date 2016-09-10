@@ -7,7 +7,11 @@ public class MultithreadExample {
 			try {
 				sleep(60);
 				
-				System.out.println("Thread id : " + this.getId() );
+				System.out.println("Thread id : " + this.getId() + " started." );
+				for(int i=0;i<5;i++){
+					sleep(60);
+					System.out.println("Thread id : " + this.getId()+ "  count :" + i);
+				}
 				
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block

@@ -12,6 +12,7 @@ public class Collections {
 		
 		int arraySize = scan.nextInt();
 		
+		System.out.println("Enter Array elements : ");
 		for (int i=0;i<arraySize;i++){
 			integerArray.add(scan.nextInt());
 		}
